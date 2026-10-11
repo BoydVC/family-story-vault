@@ -1,0 +1,91 @@
+{
+  "title": "Family Story Vault",
+  "subtitle": "Grandparents' stories for Char & Vic — Millersville MD",
+  "home": "[home address], Millersville MD 21108",
+  "family": {
+    "kids": [
+      {"id": "char", "name": "Charlotte", "nick": "Char", "born": "2013-02-12", "role": "child"},
+      {"id": "vic", "name": "Victor", "nick": "Vic", "born": "2015-06-23", "role": "child"}
+    ],
+    "parents": [
+      {"id": "boyd", "name": "Christopher Boyd", "nick": "Boyd", "role": "parent", "side": "self"},
+      {"id": "miranda", "name": "Miranda Boyd", "nick": "Randi", "role": "parent", "side": "self", "married": "2006-06-19"}
+    ],
+    "grandparents": [
+      {"id": "chris", "name": "Chris", "nick": "Daddio", "role": "grandparent", "side": "Boyd's dad", "spouse_of": "beth"},
+      {"id": "beth", "name": "Beth", "nick": "Beth", "role": "grandparent", "side": "Boyd's mom", "spouse_of": "chris"},
+      {"id": "melody", "name": "Melody", "nick": "Melody", "role": "grandparent", "side": "Miranda's mom"}
+    ],
+    "marriage": {"who": ["Boyd", "Miranda"], "date": "2006-06-19"}
+  },
+  "tags": ["EXAMPLE", "Millersville", "sports", "holidays", "boats", "hair", "school", "food"],
+  "stories": [
+    {
+      "id": "ex-boat-summer",
+      "label": "EXAMPLE",
+      "title": "The summer we lived on the boat",
+      "date": "2019-07-04",
+      "told_by": "Chris",
+      "told_to": ["Char", "Vic"],
+      "tags": ["EXAMPLE", "boats", "holidays"],
+      "photo": null,
+      "audio": null,
+      "body": "EXAMPLE placeholder: Chris (Daddio) tells how he and Beth spent summers afloat near the Chesapeake, and how Char waved from the dock the first time they tied up near Millersville. Swap in the real story when you record it."
+    },
+    {
+      "id": "ex-wedding-day",
+      "label": "EXAMPLE",
+      "title": "June 19, 2006 — Boyd & Randi",
+      "date": "2006-06-19",
+      "told_by": "Melody",
+      "told_to": ["Char", "Vic"],
+      "tags": ["EXAMPLE", "holidays"],
+      "photo": null,
+      "audio": null,
+      "body": "EXAMPLE placeholder: Melody remembers Miranda's wedding day — the weather, the dress, and the toast that made everyone laugh. Perfect 'tell me about Mom & Dad' prompt for the kids."
+    },
+    {
+      "id": "ex-first-soccer",
+      "label": "EXAMPLE",
+      "title": "Vic's first Green Hornets practice",
+      "date": "2023-09-12",
+      "told_by": "Boyd",
+      "told_to": ["Vic"],
+      "tags": ["EXAMPLE", "sports"],
+      "photo": null,
+      "audio": null,
+      "body": "EXAMPLE placeholder: Vic's first Hornets practice — cleats too big, grin too big, and Beth cheering from the sideline. Replace with a real clip or photo when you have one."
+    },
+    {
+      "id": "ex-char-aspire",
+      "label": "EXAMPLE",
+      "title": "Char's Aspire game at St Mary's",
+      "date": "2025-03-08",
+      "told_by": "Beth",
+      "told_to": ["Char"],
+      "tags": ["EXAMPLE", "sports", "school"],
+      "photo": null,
+      "audio": null,
+      "body": "EXAMPLE placeholder: Beth describes watching Char's U14G Aspire match near St Mary's HS — the assist, the high-five with teammates, and the ride home with snacks."
+    },
+    {
+      "id": "ex-melody-hair",
+      "label": "EXAMPLE",
+      "title": "Melody's kitchen hair stories",
+      "date": "2018-11-22",
+      "told_by": "Melody",
+      "told_to": ["Char", "Vic"],
+      "tags": ["EXAMPLE", "hair", "food"],
+      "photo": null,
+      "audio": null,
+      "body": "EXAMPLE placeholder: Melody (Miranda's mom) spins a Thanksgiving story about mixing holiday prep with salon chatter — JT and Laney are clients, not cousins. Keep the joke, swap the details."
+    }
+  ],
+  "prompts": [
+    "Tell me about when Mom and Dad got married",
+    "What was Vic like as a baby?",
+    "What was Char's first big game?",
+    "Where did Chris & Beth sail?",
+    "What's Melody's favorite holiday memory?"
+  ]
+}

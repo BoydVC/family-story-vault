@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Family Story Vault · Boyd</title>
+<meta name="theme-color" content="#2a1810">
+<meta name="description" content="Shell app for grandparents' stories — timeline, family tree, and tell-me-about prompts for Char & Vic. TokenMax burn.">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="44" height="44">
+        <defs>
+          <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f59e0b"/>
+            <stop offset="1" stop-color="#ea580c"/>
+          </linearGradient>
+        </defs>
+        <rect x="7" y="10" width="34" height="28" rx="6" fill="#3b2418" stroke="url(#fg)" stroke-width="2.2"/>
+        <circle cx="24" cy="22" r="7" fill="#fcd34d" opacity=".9"/>
+        <path d="M12 34c4-6 20-6 24 0" stroke="#fdba74" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Family Story Vault</h1>
+      <p class="tag">Char · Vic · grandparents' stories · Millersville</p>
+    </div>
+  </div>
+  <div class="top-actions">
+    <span class="pill soft" id="storyCount">— stories</span>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Vault screens">
+  <button class="tab active" data-view="stories" role="tab" aria-selected="true">📚 Stories</button>
+  <button class="tab" data-view="timeline" role="tab" aria-selected="false">⏳ Timeline</button>
+  <button class="tab" data-view="tree" role="tab" aria-selected="false">🌳 Tree</button>
+  <button class="tab" data-view="tell" role="tab" aria-selected="false">🎤 Tell me</button>
+  <button class="tab" data-view="about" role="tab" aria-selected="false">About</button>
+</nav>
+
+<main>
+  <section id="view-stories" class="view active" role="tabpanel">
+    <div class="stories-head">
+      <div>
+        <h2 class="view-title">Story cards</h2>
+        <p class="lede">Demo cards are labeled <strong>EXAMPLE</strong> — swap in real audio/photos later. Notes save on this device.</p>
+      </div>
+      <div class="tag-row" id="tagRow"></div>
+    </div>
+    <div class="story-grid" id="storyGrid"></div>
+  </section>
+
+  <section id="view-timeline" class="view" role="tabpanel">
+    <h2 class="view-title">Family timeline</h2>
+    <p class="lede">Marriage, births, and EXAMPLE story beats in order.</p>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section id="view-tree" class="view" role="tabpanel">
+    <h2 class="view-title">Family tree</h2>
+    <p class="lede">Kids are only <strong>Charlotte</strong> and <strong>Victor</strong>. Grandparents: Chris &amp; Beth (Boyd's), Melody (Miranda's mom).</p>
+    <div class="tree" id="tree"></div>
+  </section>
+
+  <section id="view-tell" class="view" role="tabpanel">
+    <h2 class="view-title">Tell me about…</h2>
+    <p class="lede">Prompts for Char &amp; Vic. Tap a prompt, leave a note, or stub an upload slot for later audio/photo.</p>
+    <div class="prompt-grid" id="promptGrid"></div>
+    <div class="panel upload-panel">
+      <h3>Upload slots (UI stubs)</h3>
+      <p class="hint">No real audio required — these are placeholders for a future phone capture flow.</p>
+      <div class="upload-row">
+        <label class="upload-slot">
+          <span>📷 Photo</span>
+          <input type="file" accept="image/*" id="photoStub" disabled>
+          <em>Coming soon</em>
+        </label>
+        <label class="upload-slot">
+          <span>🎙 Audio</span>
+          <input type="file" accept="audio/*" id="audioStub" disabled>
+          <em>Coming soon</em>
+        </label>
+      </div>
+      <label class="note-label">Your note (saved in localStorage)
+        <textarea id="vaultNote" rows="4" placeholder="What Grandma said today…"></textarea>
+      </label>
+      <div class="note-actions">
+        <button type="button" class="btn primary" id="btnSaveNote">Save note</button>
+        <button type="button" class="btn ghost" id="btnClearNote">Clear</button>
+        <span class="hint" id="noteHint"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="view-about" class="view" role="tabpanel">
+    <div class="about-wrap">
+      <div class="panel">
+        <h2 class="view-title">About this vault</h2>
+        <p class="lede">A shell for grandparents' stories so Char &amp; Vic can ask “tell me about…” — timeline, simple family tree, EXAMPLE story cards, and local notes.</p>
+        <ul class="about-list">
+          <li>Kids are only Charlotte (2/12/2013) and Victor (6/23/2015).</li>
+          <li>Boyd + Miranda (Randi) married 6/19/2006 · Millersville MD.</li>
+          <li>Grandparents: Chris &amp; Beth; Melody (Miranda's mom).</li>
+          <li>All demo stories are labeled EXAMPLE.</li>
+          <li>Notes persist in <code>localStorage</code> on this device.</li>
+        </ul>
+      </div>
+      <div class="panel soft-panel">
+        <h3>Hash routes</h3>
+        <p class="mono">#stories · #timeline · #tree · #tell · #about</p>
+        <h3>TokenMax</h3>
+        <p class="hint">Offline single-file burn · port 4314.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Boyd household · Millersville</span>
+  <span id="footInfo"></span>
+</footer>
+
+<!-- story detail modal -->
+<dialog id="storyModal" class="modal">
+  <form method="dialog" class="modal-card">
+    <header>
+      <span class="pill warn" id="modalLabel">EXAMPLE</span>
+      <button type="submit" class="btn ghost sm" value="close">Close</button>
+    </header>
+    <h2 id="modalTitle"></h2>
+    <p class="hint" id="modalMeta"></p>
+    <p id="modalBody"></p>
+    <div class="media-stubs">
+      <div class="media-stub">📷 Photo slot</div>
+      <div class="media-stub">🎙 Audio slot</div>
+    </div>
+  </form>
+</dialog>
+
+<script>
+window.__STORIES__ = /*__STORIES__*/ null /*__/STORIES__*/;
+</script>
+<script>/*__APP__*/</script>
+</body>
+</html>
