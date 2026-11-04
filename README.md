@@ -1,14 +1,14 @@
 # Family Story Vault
 
-Shell app for grandparents' stories — audio/photo upload stubs, timeline, simple family tree, and “tell me about…” prompts for **Char & Vic**. TokenMax burn · port **4314**.
+Shell app for grandparents' stories — audio/photo upload stubs, timeline, simple family tree, and “tell me about…” prompts for **Alex & Sam**. TokenMax burn · port **4314**.
 
-Kids are only Charlotte (2/12/2013) and Victor (6/23/2015). Demo stories are labeled **EXAMPLE**.
+Kids are only Alex (2/12/2013) and Samuel (6/23/2015). Demo stories are labeled **EXAMPLE**.
 
 ## Screens
 
 1. **Stories** — EXAMPLE cards with tags, told-by, media stubs  
 2. **Timeline** — marriage, births, story beats  
-3. **Tree** — Chris & Beth · Melody · Boyd & Miranda · Char & Vic  
+3. **Tree** — Chris & Beth · Melody · Boyd & Jordan · Alex & Sam  
 4. **Tell me** — prompts, note (localStorage), upload UI stubs  
 5. **About**
 
