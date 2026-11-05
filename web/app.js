@@ -85,9 +85,9 @@
 
   function renderTimeline() {
     const events = [
-      { date: "2006-06-19", title: "Boyd & Miranda married", detail: "June 19, 2006" },
-      { date: "2013-02-12", title: "Charlotte (Char) born", detail: "February 12, 2013" },
-      { date: "2015-06-23", title: "Victor (Vic) born", detail: "June 23, 2015" },
+      { date: "2006-06-19", title: "Boyd & Jordan married", detail: "June 19, 2006" },
+      { date: "2013-02-12", title: "Alex (Alex) born", detail: "February 12, 2013" },
+      { date: "2015-06-23", title: "Samuel (Sam) born", detail: "June 23, 2015" },
     ];
     (DATA.stories || []).forEach((s) => {
       events.push({
@@ -131,7 +131,7 @@
           </div>`).join("")}
       </div>
       <div class="tree-connector"></div>
-      <div class="tree-label">Kids (only Char &amp; Vic)</div>
+      <div class="tree-label">Kids (only Alex &amp; Sam)</div>
       <div class="tree-row">
         ${kids.map((k) => `
           <div class="tree-node kids">
