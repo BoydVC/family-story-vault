@@ -85,9 +85,9 @@
 
   function renderTimeline() {
     const events = [
-      { date: "2006-06-19", title: "Boyd & Jordan married", detail: "June 19, 2006" },
-      { date: "2013-02-12", title: "Alex (Alex) born", detail: "February 12, 2013" },
-      { date: "2015-06-23", title: "Samuel (Sam) born", detail: "June 23, 2015" },
+      { date: "2006-07-04", title: "Alex & Sam married", detail: "July 4, 2006" },
+      { date: "2013-03-15", title: "Riley (Ri) born", detail: "March 15, 2013" },
+      { date: "2015-08-10", title: "Jordan (Jo) born", detail: "August 10, 2015" },
     ];
     (DATA.stories || []).forEach((s) => {
       events.push({
@@ -122,7 +122,7 @@
           </div>`).join("")}
       </div>
       <div class="tree-connector"></div>
-      <div class="tree-label">Parents · married ${esc((f.marriage && f.marriage.date) || "2006-06-19")}</div>
+      <div class="tree-label">Parents · married ${esc((f.marriage && f.marriage.date) || "2006-07-04")}</div>
       <div class="tree-row">
         ${parents.map((p) => `
           <div class="tree-node">
@@ -131,7 +131,7 @@
           </div>`).join("")}
       </div>
       <div class="tree-connector"></div>
-      <div class="tree-label">Kids (only Alex &amp; Sam)</div>
+      <div class="tree-label">Kids (only Ri &amp; Jo)</div>
       <div class="tree-row">
         ${kids.map((k) => `
           <div class="tree-node kids">
@@ -139,7 +139,7 @@
             <span>${esc(k.name)} · born ${esc(fmtDate(k.born))}</span>
           </div>`).join("")}
       </div>
-      <p class="hint" style="text-align:center;margin-top:.5rem">${esc(DATA.home || "Millersville MD")}</p>
+      <p class="hint" style="text-align:center;margin-top:.5rem">${esc(DATA.home || "Lakeside MD")}</p>
     `;
   }
 

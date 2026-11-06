@@ -1,14 +1,14 @@
 # Family Story Vault
 
-Shell app for grandparents' stories — audio/photo upload stubs, timeline, simple family tree, and “tell me about…” prompts for **Alex & Sam**. TokenMax burn · port **4314**.
+Shell app for grandparents' stories — audio/photo upload stubs, timeline, simple family tree, and “tell me about…” prompts for **Ri & Jo**. TokenMax burn · port **4314**.
 
-Kids are only Alex (2/12/2013) and Samuel (6/23/2015). Demo stories are labeled **EXAMPLE**.
+Kids are only Riley (3/15/2013) and Jordan (8/10/2015). Demo stories are labeled **EXAMPLE**.
 
 ## Screens
 
 1. **Stories** — EXAMPLE cards with tags, told-by, media stubs  
 2. **Timeline** — marriage, births, story beats  
-3. **Tree** — Chris & Beth · Melody · Boyd & Jordan · Alex & Sam  
+3. **Tree** — Pat & Morgan · Casey · Alex & Sam · Ri & Jo  
 4. **Tell me** — prompts, note (localStorage), upload UI stubs  
 5. **About**
 
@@ -32,7 +32,7 @@ Offline single file: `dist/family-story-vault.html`
 
 ---
 ## Repo notes
-- **Built:** Oct 2026 (TokenMax build week; see SHORTLIST/ledger), by TokenMax (Boyd's Grok Bot) on the Grok Bot box.
+- **Built:** Oct 2026 (TokenMax build week; see SHORTLIST/ledger), by TokenMax (Alex's Grok Bot) on the Grok Bot box.
 - **Run:** `./run.sh` (then open the localhost URL it prints).
 - Imported from `/workspace/tokenmax/family-story-vault` on Oct 23, 2026. node_modules, virtualenvs, logs and files over 20 MB were left out.
 - Personal details (emails, phone numbers, home street address) were replaced with `[redacted-…]` placeholders.
